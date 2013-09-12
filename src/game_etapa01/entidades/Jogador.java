@@ -10,31 +10,39 @@ public class Jogador {
 	}
 	
 	private boolean virarCarta(boolean estado){
+		//true = modo neutro(carta na vertical)
+		//false = modo defensivo/ofensivo(carta na horizontal)
+		if(estado==true){
+			estado=false;
+		}else estado=true;
 		
+		return estado;
 	}
 	
-	private void invocarCarta(){
-		
-		
+	private void invocarCarta(int numero){
+		/*carta_mao - carta.numero
+		tabuleiro + carta.numero
+		*/
 	}
 	
-	private boolean desistir(){
-		
+	private void desistir(){
+		this.hp = 0;
 		
 	}
 	
 	private void comprarCarta(){
-		
+		/*carta_mao + carta.aleatoria
+		*/
 		
 	}
 	
 	private void descartar(){
-		
+		/*carta_mao - carta.numero*/
 		
 	}
 	
 	private void jogarCarta(){
-		
+		/**/
 		
 	}
 

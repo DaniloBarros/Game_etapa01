@@ -13,11 +13,19 @@ public class Monstro {
 	}
 	
 	private boolean atacar(int atk1, int def2){
-		
+		boolean sucess= false;
+		if(atk1>def2){
+			sucess=true;
+		}
+		return sucess;
 	}
 	
 	private boolean defender(int def1, int atk2){
-		
+		boolean sucess=false;
+		if(def1>atk2){
+			sucess=true;
+		}
+		return sucess;
 	}
 
 	/**
