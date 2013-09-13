@@ -12,18 +12,50 @@ public class Magia {
 	private int bonusatk;
 	private int bonusdef;
 	private int bonushp;
+	private int num;
+	
+	private Jogador jogador;
 
-	public Magia(String nome, int atk, int def, int hp) {
-		this.bonusatk = atk;
-		this.bonusdef = def;
-		this.bonushp = hp;
-		this.nome = nome;
+	public Magia() {
+		this.bonusatk = 0;
+		this.bonusdef = 0;
+		this.bonushp = 0;
+		this.nome = "vazio";
+	}
+	
+	public void criarCarta(){
+		
+	}
+	
+	private boolean validarCarta(int num){
+		boolean confirm=false;
+		if(num>60 && num<=80){
+			confirm=true;
+			
+		}
+		return confirm;
+	}
+	
+ 	public Jogador getJogador(){
+		return jogador;
+	}
+	
+	public void setJogador(Jogador jogador){
+		this.jogador = jogador;
 	}
 
+	public int getNum(){
+		return num;
+	}
+	
+	public void setNum(int num){
+		this.num = num;
+	}
+	
 	/**
 	 * @return the nome
 	 */
-	public String getNome() {
+ 	public String getNome() {
 		return nome;
 	}
 

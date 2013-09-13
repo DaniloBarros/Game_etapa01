@@ -1,12 +1,18 @@
 package game_etapa01.entidades;
 
+import game_etapa01.entidades.Monstro;
+
 public class Jogador {
 	private String nome;
 	private int hp;
+	
+	private Monstro[] cartaMonstro={};
+	private Terreno[] cartaTerreno={};
+	private Magia[] cartaMagia={};
 
-	public Jogador(String nome) {
+	public Jogador() {
 		this.hp = 2000;
-		this.nome = nome;
+		this.nome = "vazio";
 	}
 	
 	private boolean virarCarta(boolean estado){
@@ -41,11 +47,31 @@ public class Jogador {
 		
 	}
 	
-	private void jogarCarta(){
-		/**/
 		
+	public Monstro[] getCartaMonstro(){
+		return cartaMonstro;
+	}
+	
+	public void setCartaMonstro(Monstro[] cartaMonstro){
+		this.cartaMonstro = cartaMonstro;
 	}
 
+	public Terreno[] getCartaTerreno(){
+		return cartaTerreno;
+	}
+	
+	public void setCartaTerreno(Terreno[] cartaTerreno){
+		this.cartaTerreno = cartaTerreno;
+	}
+	
+	public Magia[] getCartaMagia(){
+		return cartaMagia;
+	}
+	
+	public void setCartaMagia(Magia[] cartaMagia){
+		this.cartaMagia = cartaMagia;
+	}
+	
 	/**
 	 * @return the nome
 	 */
